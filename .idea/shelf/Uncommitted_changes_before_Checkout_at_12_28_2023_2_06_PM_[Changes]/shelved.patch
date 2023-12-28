@@ -1,0 +1,216 @@
+Index: src/App.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import logo from './logo.svg';\r\nimport '@/App.css';\r\nimport { BrowserRouter as Router, Routes, Route } from 'react-router-dom'\r\n\r\nfunction App() {\r\n  return (\r\n    <></>\r\n  );\r\n}\r\n\r\nexport default App;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/App.js b/src/App.js
+--- a/src/App.js	(revision 0257f8c899432171c83e573a9fe62a20eae125dd)
++++ b/src/App.js	(date 1703747146600)
+@@ -1,10 +1,11 @@
+-import logo from './logo.svg';
+-import '@/App.css';
+-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
++
++
++import Layout from "./layout/Layout";
+ 
+ function App() {
+   return (
+-    <></>
++    <>
++      <Layout/></>
+   );
+ }
+ 
+Index: src/layout/Home.js
+===================================================================
+diff --git a/src/layout/Home.js b/src/layout/Home.js
+deleted file mode 100644
+--- a/src/layout/Home.js	(revision 0257f8c899432171c83e573a9fe62a20eae125dd)
++++ /dev/null	(revision 0257f8c899432171c83e573a9fe62a20eae125dd)
+@@ -1,8 +0,0 @@
+-import React from 'react'
+-function Home() {
+-    return (
+-        <div>Home Page................. </div>
+-    )
+-}
+-
+-export default Home
+\ No newline at end of file
+Index: src/layout/styles/variable.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/variable.css b/src/layout/styles/variable.css
+new file mode 100644
+--- /dev/null	(date 1703747146706)
++++ b/src/layout/styles/variable.css	(date 1703747146706)
+@@ -0,0 +1,3 @@
++
++
++/*# sourceMappingURL=variable.css.map */
+Index: src/layout/styles/topbar.scss
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/topbar.scss b/src/layout/styles/topbar.scss
+new file mode 100644
+--- /dev/null	(date 1703747146698)
++++ b/src/layout/styles/topbar.scss	(date 1703747146698)
+@@ -0,0 +1,8 @@
++
++@import 'variable';
++.layout_topbar {
++  background-color: $bg_layout;
++      height: 4rem;
++
++}
++
+Index: src/layout/AppTopBar.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/AppTopBar.js b/src/layout/AppTopBar.js
+new file mode 100644
+--- /dev/null	(date 1703747146691)
++++ b/src/layout/AppTopBar.js	(date 1703747146691)
+@@ -0,0 +1,13 @@
++import React from 'react'
++import "./styles/topbar.scss"
++import { Button } from 'primereact/button';
++function AppTopBar() {
++      return (
++            <div className='layout_topbar flex'>
++                <Button label="Đăng Nhập" severity="success" rounded />
++                <Button label="Đăng Ký" severity="success" rounded />
++            </div>
++      )
++}
++
++export default AppTopBar
+Index: src/layout/styles/topbar.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/topbar.css b/src/layout/styles/topbar.css
+new file mode 100644
+--- /dev/null	(date 1703747146659)
++++ b/src/layout/styles/topbar.css	(date 1703747146659)
+@@ -0,0 +1,6 @@
++.layout_topbar {
++  background-color: #101010;
++  height: 4rem;
++}
++
++/*# sourceMappingURL=topbar.css.map */
+Index: src/layout/styles/topbar.css.map
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/topbar.css.map b/src/layout/styles/topbar.css.map
+new file mode 100644
+--- /dev/null	(date 1703747146627)
++++ b/src/layout/styles/topbar.css.map	(date 1703747146627)
+@@ -0,0 +1,1 @@
++{"version":3,"sourceRoot":"","sources":["topbar.scss","variable.scss"],"names":[],"mappings":"AAEA;EACE,kBCHU;EDIN","file":"topbar.css"}
+\ No newline at end of file
+Index: src/layout/styles/layout.css.map
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/layout.css.map b/src/layout/styles/layout.css.map
+new file mode 100644
+--- /dev/null	(date 1703747146640)
++++ b/src/layout/styles/layout.css.map	(date 1703747146640)
+@@ -0,0 +1,1 @@
++{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"layout.css"}
+\ No newline at end of file
+Index: src/layout/styles/variable.css.map
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/variable.css.map b/src/layout/styles/variable.css.map
+new file mode 100644
+--- /dev/null	(date 1703747146617)
++++ b/src/layout/styles/variable.css.map	(date 1703747146617)
+@@ -0,0 +1,1 @@
++{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"variable.css"}
+\ No newline at end of file
+Index: src/layout/styles/variable.scss
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/variable.scss b/src/layout/styles/variable.scss
+new file mode 100644
+--- /dev/null	(date 1703747146633)
++++ b/src/layout/styles/variable.scss	(date 1703747146633)
+@@ -0,0 +1,1 @@
++$bg_layout: #101010;
+\ No newline at end of file
+Index: src/layout/AppSidebar.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/AppSidebar.js b/src/layout/AppSidebar.js
+new file mode 100644
+--- /dev/null	(date 1703747146668)
++++ b/src/layout/AppSidebar.js	(date 1703747146668)
+@@ -0,0 +1,7 @@
++export const SideBar = () => {
++      return (
++            <>
++
++            </>
++      )
++}
+\ No newline at end of file
+Index: src/layout/styles/layout.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/styles/layout.css b/src/layout/styles/layout.css
+new file mode 100644
+--- /dev/null	(date 1703747146611)
++++ b/src/layout/styles/layout.css	(date 1703747146611)
+@@ -0,0 +1,3 @@
++
++
++/*# sourceMappingURL=layout.css.map */
+Index: src/layout/Layout.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/layout/Layout.js b/src/layout/Layout.js
+new file mode 100644
+--- /dev/null	(date 1703747146714)
++++ b/src/layout/Layout.js	(date 1703747146714)
+@@ -0,0 +1,13 @@
++import React from 'react';
++import AppTopBar from './AppTopBar';
++
++function Layout() {
++      return (
++            <div>
++                  <AppTopBar />
++
++            </div>
++      );
++}
++
++export default Layout;
+diff --git a/src/layout/styles/layout.scss b/src/layout/styles/layout.scss
+new file mode 100644
