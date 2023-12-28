@@ -1,5 +1,9 @@
-const publicRoutes = [
+import { DashBoard } from "@/modules/dashboard"
 
+
+
+const publicRoutes = [
+    { path: '/', component: DashBoard },
 ]
 const privateRoutes = [
 
