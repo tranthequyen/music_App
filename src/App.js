@@ -5,7 +5,7 @@ import { Button } from 'primereact/button';
 
 function App() {
   return (
-    <Button className='p-5' ></Button>
+    <></>
   );
 }
 
