@@ -1,0 +1,7 @@
+@import 'variable';
+.sidebar{
+  background: $bg_layout;
+  color:#FFF;
+  height: calc(100vh - 3.5rem);
+  border-radius: 5px;
+}
